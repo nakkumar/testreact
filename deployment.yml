@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nakkumar/testreact:20
+        image: nakkumar/testreact:27
 
         ports:
         - containerPort: 8080

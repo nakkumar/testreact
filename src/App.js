@@ -2,7 +2,7 @@ function App() {
   return (
     <div style={{ textAlign: "center", marginTop: "100px" }}>
       <h1>Arun kumar demo Done</h1>
-      <p>Running inside Docker Container</p>
+      <p>Running inside k8 Container</p>
     </div>
   );
 }
