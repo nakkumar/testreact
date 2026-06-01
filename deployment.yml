@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nakkumar/testreact:27
+        image: nakkumar/testreact:34
 
         ports:
         - containerPort: 8080
@@ -44,5 +44,4 @@ spec:
   - protocol: TCP
     port: 8080
     targetPort: 8080
-
-  type: NodePort 
+    nodePort: 30080
