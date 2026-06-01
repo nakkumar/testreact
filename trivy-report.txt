@@ -4,7 +4,7 @@ Report Summary
 ┌───────────────────────────────────────┬────────┬─────────────────┬─────────┐
 │                Target                 │  Type  │ Vulnerabilities │ Secrets │
 ├───────────────────────────────────────┼────────┼─────────────────┼─────────┤
-│ nakkumar/testreact:34 (alpine 3.23.4) │ alpine │        1        │    -    │
+│ nakkumar/testreact:35 (alpine 3.23.4) │ alpine │        1        │    -    │
 └───────────────────────────────────────┴────────┴─────────────────┴─────────┘
 Legend:
 - '-': Not scanned
@@ -20,7 +20,7 @@ Learn more and start using VEX: https://trivy.dev/docs/v0.70/guide/supply-chain/
 To disable this notice, set the TRIVY_DISABLE_VEX_NOTICE environment variable.
 
 
-nakkumar/testreact:34 (alpine 3.23.4)
+nakkumar/testreact:35 (alpine 3.23.4)
 =====================================
 Total: 1 (HIGH: 1, CRITICAL: 0)
 

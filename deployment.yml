@@ -1,47 +1,41 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: react-app1
   labels:
-    app: nginx
+    app: react-app1
 spec:
-  replicas: 3
-
+  replicas: 1
   selector:
     matchLabels:
-      app: nginx
-
+      app: react-app1
   template:
     metadata:
       labels:
-        app: nginx
-
+        app: react-app1
     spec:
       containers:
-      - name: nginx
-        image: nakkumar/testreact:34
-
+      - name: react-app1
+        image: nakkumar/testreact:35
         ports:
         - containerPort: 8080
+#        imagePullPolicy: Never
+        securityContext:
+          runAsNonRoot: true
+          runAsUser: 100
+          allowPrivilegeEscalation: false
 
-        resources:
-          requests:
-            memory: "128Mi"
-            cpu: "100m"
-          limits:
-            memory: "256Mi"
-            cpu: "200m"
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: react-app1-service
 spec:
-  selector:
-    app: nginx
-
+  type: NodePort
   ports:
-  - protocol: TCP
-    port: 8080
+  - name: http
+    port:  90
     targetPort: 8080
-    nodePort: 30080
+    protocol: TCP
+  selector:
+    app: react-app1
